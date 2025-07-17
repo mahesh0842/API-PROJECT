@@ -1,0 +1,53 @@
+-- Create database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS connect;
+USE connect;
+
+-- Create students table
+DROP TABLE IF EXISTS students;
+CREATE TABLE students (
+    student_id VARCHAR(10) PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    date_of_birth DATE NOT NULL,
+    gender VARCHAR(20) NOT NULL,
+    major VARCHAR(100) NOT NULL,
+    gpa DECIMAL(3,2) NOT NULL,
+    enrollment_date DATE NOT NULL,
+    phone_number VARCHAR(15) NOT NULL,
+    address VARCHAR(200) NOT NULL
+);
+
+-- Insert student data
+INSERT INTO students VALUES
+('1001','Emily','Johnson','emily.johnson@example.com','2003-05-15','Female','Computer Science',3.75,'2021-09-01','555-0101','123 Main St, Anytown, USA'),
+('1002','Michael','Smith','michael.smith@example.com','2002-11-22','Male','Electrical Engineering',3.45,'2021-09-01','555-0102','456 Oak Ave, Somewhere, USA'),
+('1003','Sarah','Williams','sarah.williams@example.com','2003-02-10','Female','Biology',3.90,'2021-09-01','555-0103','789 Pine Rd, Nowhere, USA'),
+('1004','David','Brown','david.brown@example.com','2002-08-30','Male','Mathematics',3.20,'2021-09-01','555-0104','321 Elm St, Anywhere, USA'),
+('1005','Jessica','Davis','jessica.davis@example.com','2003-04-05','Female','Psychology',3.65,'2021-09-01','555-0105','654 Maple Dr, Everywhere, USA'),
+('1006','Robert','Miller','robert.miller@example.com','2002-12-18','Male','Business Administration',3.30,'2021-09-01','555-0106','987 Cedar Ln, Somewhere, USA'),
+('1007','Jennifer','Wilson','jennifer.wilson@example.com','2003-07-23','Female','Chemistry',3.85,'2021-09-01','555-0107','159 Birch Blvd, Nowhere, USA'),
+('1008','Thomas','Moore','thomas.moore@example.com','2002-09-14','Male','Physics',3.50,'2021-09-01','555-0108','753 Spruce Way, Anywhere, USA'),
+('1009','Lisa','Taylor','lisa.taylor@example.com','2003-01-29','Female','English Literature',3.95,'2021-09-01','555-0109','246 Willow Ct, Everywhere, USA'),
+('1010','Christopher','Anderson','christopher.anderson@example.com','2002-10-11','Male','History',3.25,'2021-09-01','555-0110','864 Aspen Pl, Somewhere, USA'),
+('1021','Emily','John','emily.john@2xample.com','2003-05-15','Female','Computer Science',3.75,'2021-09-01','555-0101','123 Main St, Anytown, USA'),
+('1022','Chloe','Lewis','chloe.lewis@example.com','2004-03-27','Female','Data Science',3.91,'2022-09-01','555-0132','345 Maple Ave, Datatown, USA'),
+('1023','Samuel','Robinson','samuel.robinson@example.com','2002-12-09','Male','Information Systems',3.68,'2021-09-01','555-0133','456 Pine Rd, Infocity, USA'),
+('1024','Victoria','Wood','victoria.wood@example.com','2003-09-14','Female','Software Engineering',3.77,'2021-09-01','555-0134','567 Elm Blvd, Codeville, USA'),
+('1025','Nathan','Harris','nathan.harris@example.com','2004-07-03','Male','Cybersecurity',3.85,'2022-09-01','555-0135','678 Cedar Ln, Securetown, USA'),
+('1026','Zoe','Nelson','zoe.nelson@example.com','2003-02-20','Female','Computer Science',3.93,'2021-09-01','555-0136','789 Birch Dr, Algorand, USA'),
+('1027','Ryan','Mitchell','ryan.mitchell@example.com','2002-11-11','Male','Computer Science',3.72,'2021-09-01','555-0137','890 Willow Way, Binaryburg, USA'),
+('1028','Hannah','Carter','hannah.carter@example.com','2004-04-30','Female','Artificial Intelligence',3.96,'2022-09-01','555-0138','901 Aspen Ct, Neuralton, USA'),
+('1029','Dylan','Perez','dylan.perez@example.com','2003-08-22','Male','Computer Science',3.64,'2021-09-01','555-0139','112 Redwood Ave, Siliconville, USA'),
+('1030','Lily','Roberts','lily.roberts@example.com','2002-10-05','Female','Computer Graphics',3.81,'2021-09-01','555-0140','223 Spruce Blvd, Pixeltown, USA'),
+('1031','Benjamin','Clark','benjamin.clark@example.com','2003-06-18','Male','Computer Engineering',3.82,'2021-09-01','555-0131','234 Oak St, Techville, USA'),
+('1032','Ava','Thompson','ava.thompson@example.com','2003-07-22','Female','Data Science',3.95,'2021-09-01','555-0142','445 Maple Street, Algoton, USA'),
+('1033','Lucas','Evans','lucas.evans@example.com','2002-11-30','Male','Cybersecurity',3.79,'2021-09-01','555-0143','556 Pine Road, Securbia, USA'),
+('1034','Mia','Sanchez','mia.sanchez@example.com','2004-04-18','Female','Computer Science',3.92,'2022-09-01','555-0144','667 Elm Avenue, Codeford, USA'),
+('1035','Jackson','King','jackson.king@example.com','2003-09-05','Male','Artificial Intelligence',3.97,'2021-09-01','555-0145','778 Cedar Boulevard, Neuralsburg, USA'),
+('1036','Charlotte','Scott','charlotte.scott@example.com','2002-12-12','Female','Computer Engineering',3.84,'2021-09-01','555-0146','889 Birch Drive, Chipville, USA'),
+('1037','Aiden','Green','aiden.green@example.com','2004-06-25','Male','Game Development',3.76,'2022-09-01','555-0147','990 Willow Lane, Pixelton, USA'),
+('1038','Amelia','Baker','amelia.baker@example.com','2003-03-08','Female','Computer Science',3.89,'2021-09-01','555-0148','101 Redwood Court, Siliconford, USA'),
+('1039','Caleb','Adams','caleb.adams@example.com','2002-10-17','Male','Information Technology',3.71,'2021-09-01','555-0149','212 Spruce Street, Dataville, USA'),
+('1040','Harper','Rivera','harper.rivera@example.com','2004-05-20','Female','Computer Science',3.94,'2022-09-01','555-0150','323 Aspen Way, Programton, USA'),
+('1045','sdfdwf','dsfa','m@gmail.com','2022-01-06','Male','wef',3.00,'2025-02-05','1554284555','ghjhnfhnfn');
