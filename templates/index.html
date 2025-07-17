@@ -1,0 +1,44 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        button {
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Student Portal</h1>
+    
+    <button onclick="window.location.href='/form'">Form Fill-Up</button>
+    <button onclick="window.location.href='/view-students'">View Data</button>
+    <button onclick="window.location.href='/update-student-form'">Update Student</button>
+    <button onclick="window.location.href='/delete-student-form'">Delete Student</button>
+</body>
+</html>

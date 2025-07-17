@@ -1,0 +1,22 @@
+# Ignore SQLite database files
+
+# Ignore environment files
+.env
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore node modules
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore OS generated files
+.DS_Store
+
+# Ignore IDE/project files
+.vscode/
+.idea/
+*.swp

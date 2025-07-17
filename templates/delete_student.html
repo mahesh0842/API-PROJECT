@@ -1,0 +1,62 @@
+<!-- templates/delete_student.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Student</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 30px auto; padding: 20px; }
+        label, input, button { display: block; width: 100%; margin-bottom: 15px; }
+        input, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #d9534f;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c9302c;
+        }
+        #message {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Delete Student Record</h2>
+    <form id="deleteForm">
+        <label for="student_id">Enter Student ID to delete:</label>
+        <input type="number" name="student_id" required>
+        <button type="submit">Delete Student</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        document.getElementById("deleteForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const studentId = e.target.student_id.value;
+
+            if (!studentId) {
+                document.getElementById("message").textContent = "Student ID is required.";
+                return;
+            }
+
+            try {
+                const response = await fetch(`/delete-student/${studentId}`, {
+                    method: 'DELETE'
+                });
+                const result = await response.json();
+                document.getElementById("message").textContent = result.message;
+                if (response.ok) e.target.reset();
+            } catch (error) {
+                document.getElementById("message").textContent = "Error: " + error.message;
+            }
+        });
+    </script>
+</body>
+</html>
