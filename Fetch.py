@@ -1,4 +1,6 @@
 from db_connection import get_db_connection
+from fastapi import FastAPI
+app = FastAPI()  # ✅ This line defines 'app'
 @app.get("/api/students")
 async def get_students():
     conn = get_db_connection()
