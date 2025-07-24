@@ -72,3 +72,5 @@ yarl==1.9.4
 yt-dlp==2025.6.30
 zope.event==5.0
 zope.interface==6.4.post2
+cython>=0.29.30
+gevent
