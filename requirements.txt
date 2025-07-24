@@ -16,7 +16,6 @@ et_xmlfile==2.0.0
 fastapi==0.115.14
 fonttools==4.53.1
 frozenlist==1.4.1
-gevent==24.2.1
 greenlet==3.0.3
 h11==0.16.0
 idna==3.7
