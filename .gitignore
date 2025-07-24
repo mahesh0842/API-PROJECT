@@ -1,7 +1,7 @@
 # Ignore SQLite database files
 
 # Ignore environment files
-.env
+venv
 
 # Ignore Python cache
 __pycache__/
